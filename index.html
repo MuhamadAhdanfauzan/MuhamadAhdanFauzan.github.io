@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bursa Makanan - Daftar Menu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .header-container {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+        }
+        .header {
+            text-align: left;
+            font-size: 24px;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            margin-top: 10px;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 10px;
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 10px;
+        }
+        .nav-menu a:hover {
+            text-decoration: underline;
+        }
+        .search-bar {
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .search-bar input {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .welcome-message {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .welcome-text {
+            color: #45a049;
+        }
+        .wallet-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .wallet-balance {
+            font-size: 20px;
+            color: #4CAF50;
+        }
+        .top-up-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .top-up-btn:hover {
+            background-color: #45a049;
+        }
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .content-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #45a049;
+        }
+        .content-item:hover {
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+        .content-item p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            flex: 1;
+        }
+        .content-item .buy-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: auto;
+            align-self: center;
+        }
+        .buy-btn:hover {
+            background-color: #45a049;
+        }
+        .logout-btn {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .logout-btn:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="header">Bursa Makanan</div>
+        <div class="nav-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Cari di Bursa Makanan...">
+            </div>
+            <div class="nav-menu">
+                <a href="#notifikasi">Notifikasi</a>
+                <a href="menu.html">Pesanan</a>
+                <a href="add_menu.html">Jualan</a>
+                <a href="#profil">Profil</a>
+            </div>
+            <a href="logout.php" class="logout-btn">Logout</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="welcome-message">
+            <p class="welcome-text">Selamat datang di Bursa Makanan, Ahdan</p>
+        </div>
+
+        <div class="wallet-container">
+            <span class="wallet-balance">Saldo: Rp 200.000</span>
+            <a href="topup.php" class="top-up-btn">Top Up</a>
+        </div>
+        
+        <div class="content">
+            <div class="content-item">
+                <img src="uploads/produk_1/konten2.png" alt="Donat J.CO">
+                <div class="details">
+                    <p>J.CO Donuts</p>
+                    <p class="price">Rp 14.000</p>
+                </div>
+                <button class="buy-btn" onclick="location.href='product1.html'">Beli</button>
+            </div>
+            <div class="content-item">
+                <img src="uploads/produk_2/tiramisu.jpg" alt="Donat Tiramisu">
+                <div class="details">
+                    <p>Donat Tiramisu</p>
+                    <p class="price">Rp 13.000</p>
+                </div>
+                <button class="buy-btn" onclick="location.href='product2.html'">Beli</button>
+            </div>
+            <div class="content-item">
+                <img src="uploads/produk_3/oreology.jpg" alt="Oreology">
+                <div class="details">
+                    <p>Oreology</p>
+                    <p class="price">Rp 8.000</p>
+                </div>
+                <button class="buy-btn" onclick="location.href='product3.html'">Beli</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

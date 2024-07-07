@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Menu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .header-container {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            height: 60px; /* Atur tinggi header sesuai kebutuhan */
+        }
+        .header {
+            text-align: left;
+            font-size: 30px;
+            margin-bottom: 50px; /* Tambahkan margin-bottom di sini */
+        }
+
+        .container {
+            width: 50%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 70px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            min-height: 100vh; /* agar konten bisa di-scroll ke bawah */
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            padding: 30px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="file"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <a href="index.html" class="header" style="text-decoration: none; color: #ffffff;">Bursa Makanan</a>
+    </div>
+    <div class="container">
+        <h1>Tambah Menu</h1>
+        <form action="add-menu.html" method="POST" enctype="multipart/form-data">
+            <label for="photo">Foto Menu</label>
+            <input type="file" id="photo" name="photo" required>
+            <label for="name">Nama Menu</label>
+            <textarea id="name" name="name" required></textarea>
+            <label for="category">Kategori Menu</label>
+            <select id="category" name="category">
+                <option value="Roti">Roti</option>
+                <!-- Tambahkan opsi kategori lainnya sesuai kebutuhan -->
+            </select>
+            <label for="description">Deskripsi menu</label>
+            <textarea id="description" name="description" required></textarea>
+            <label for="price">Atur Harga (Rp)</label>
+            <input type="number" id="price" name="price" required>
+            <button type="submit">Tambahkan</button>
+        </form>
+    </div>
+</body>
+</html>

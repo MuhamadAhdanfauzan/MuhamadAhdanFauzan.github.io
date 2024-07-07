@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bursa Makanan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="header">Bursa Makanan</div>
+        <div class="nav-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Cari di Bursa Makanan...">
+            </div>
+            <div class="nav-menu">
+                <a href="#notifikasi">Notifikasi</a>
+                <a href="#pesanan">Pesanan</a>
+                <a href="#jualan">Jualan</a>
+                <a href="#profil">Profil</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="product">
+            <img src="donat.png" alt="Donat">
+            <h3>J.CO</h3>
+            <p>Donat isi 5<br>Rp 12.000</p>
+        </div>
+        <div class="order-summary">
+            <button class="promo">Makin hemat pakai promo</button>
+            <div class="summary">
+                <h4>Ringkasan Belanja</h4>
+                <p>Total Belanja</p>
+                <p>Total Harga(1 Barang) Rp12.000</p>
+                <p>Total Proteksi Rp1.000</p>
+            </div>
+            <div class="summary">
+                <h4>Ringkasan Belanja</h4>
+                <p>Biaya Layanan Rp1.000</p>
+                <p>Biaya Jasa Aplikasi Rp1.000</p>
+            </div>
+            <div class="total">
+                <h3>Total Tagihan Rp15.000</h3>
+                <form action="order.php" method="POST">
+                    <button type="submit">Beli</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

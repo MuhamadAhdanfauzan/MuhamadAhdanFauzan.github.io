@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bursa Makanan - Produk</title>
+    <link rel="stylesheet" href="css/product.css">
+    <style>
+        .header-container {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+        }
+        .header {
+            text-align: left;
+            font-size: 24px;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            margin-top: 10px;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 10px;
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;          
+            padding: 5px 10px;
+        }
+        .nav-menu a:hover {
+            text-decoration: underline;
+        }
+        .search-bar {
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .search-bar input {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 50px;
+        }
+
+        .product {
+            width: 40%;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .product h3, .product p {
+            text-align: center;
+        }
+
+        .order-summary {
+            width: 55%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-summary .promo {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .summary, .total {
+            margin-bottom: 20px;
+        }
+
+        .summary h4, .total h3 {
+            margin: 0 0 10px 0;
+        }
+
+        .summary p, .total p {
+            margin: 5px 0;
+        }
+
+        .total button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .total button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+</head>
+<body>
+<div class="header-container">
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+        <div class="header">Bursa Makanan</div>
+    </a>        
+    <div class="nav-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Cari di Bursa Makanan...">
+            </div>
+            <div class="nav-menu">
+                <a href="#notifikasi">Notifikasi</a>
+                <a href="menu.html">Pesanan</a>
+                <a href="#jualan">Jualan</a>
+                <a href="#profil">Profil</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="product" id="produk_3">
+            <img src="uploads/produk_3/oreology.jpg" alt="Produk 1">
+            <h3>Oreology</h3>
+            <p>Deskripsi Produk 1<br>Donat Oreology memiliki topping celupan 
+                coklat putih dengan taburan remah-remah Oreo. Sebagai pelengkap, Oreology juga memiliki baluran coklat putih untuk meningkatkan cita rasa donat ini. pembelian per buah</p>
+        </div>
+        <div class="order-summary">
+            <button class="promo">Makin hemat pakai promo</button>
+            <div class="summary">
+                <h4>Ringkasan Belanja</h4>
+                <p>Total Belanja</p>
+                <p>Total Harga (1 Barang) Rp 8,000.00</p>
+                <p>Total Proteksi Rp 1.000,00</p>
+            </div>
+            <div class="summary">
+                <h4>Ringkasan Belanja</h4>
+                <p>Biaya Layanan Rp 2.000,00</p>
+                <p>Biaya Jasa Aplikasi Rp 2.000,00</p>
+            </div>
+            <div class="total">
+                <h3>Total Tagihan Rp 13.000,00</h3>
+                <form action="bayar.php" method="POST">
+                    <input type="hidden" name="product_id" value="1">
+                    <input type="hidden" name="total_tagihan" value="55000">
+                    <button type="submit">Beli</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

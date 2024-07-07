@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bursa Makanan - Daftar Menu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Your CSS styles here */
+        .header-container {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+        }
+        .header {
+            text-align: left;
+            font-size: 24px;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            margin-top: 10px;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 10px;
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;          
+            padding: 5px 10px;
+        }
+        .nav-menu a:hover {
+            text-decoration: underline;
+        }
+        .search-bar {
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .search-bar input {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            min-height: 100vh; /* Allow content to scroll */
+            display: flex;
+            flex-direction: column;
+        }
+        .welcome-message {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .content-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Top and bottom shadow */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: box-shadow 0.3s ease; /* Transition animation for shadow */
+            border: 1px solid #45a049;
+        }
+        .content-item:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+        }
+        .content-item img {
+            width: 100px; /* Adjust image size as needed */
+            height: auto; /* Maintain original aspect ratio */
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        .content-item .details {
+            flex: 1;
+        }
+        .content-item .price {
+            font-weight: bold;
+        }
+        .content-item .orders {
+            margin-top: 10px;
+        }
+        .add-menu-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .add-menu-btn:hover {
+            background-color: #45a049;
+        }
+        .hapus-btn {
+            background-color: #f44336;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        .hapus-btn:hover {
+            background-color: #d32f2f;
+        }
+        .logout-btn {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .logout-btn:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="header">
+            <a href="index.html" style="color: white; text-decoration: none;">Bursa Makanan</a>
+        </div>
+        <div class="nav-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Cari di Bursa Makanan...">
+            </div>
+            <div class="nav-menu">
+                <a href="#notifikasi">Notifikasi</a>
+                <a href="#pesanan">Pesanan</a>
+                <a href="add-menu.php">Jualan</a>
+                <a href="#profil">Profil</a>
+            </div>
+            <a href="logout.php" class="logout-btn">Logout</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="welcome-message">
+            <p>Daftar Menu</p>
+        </div>
+        
+        <div class="content">
+            <div class="content-item">
+                <img src="uploads/produk_1/konten2.png" alt="Donat J.CO">
+                <div class="details">
+                    <p>DONAT JCO J.co Donuts (AREA BALI ONLY)</p>
+                    <p class="price">Rp 14.000</p>
+                    <p>Jumlah Pesanan : 12</p>
+                </div>
+                <button type="submit" name="hapus" class="hapus-btn">Hapus</button>
+            </form>
+            </div>
+
+            <div class="content-item">
+                <img src="uploads/produk_2/tiramisu.jpg" alt="Donat J.CO">
+                <div class="details">
+                    <p>Donat Tiramisu</p>
+                    <p class="price">Rp 13.000</p>
+                    <p>Jumlah Pesanan : 13</p>
+                </div>
+                <button type="submit" name="hapus" class="hapus-btn">Hapus</button>
+
+            </div>
+            <div class="content-item">
+                <img src="uploads/produk_2/tiramisu.jpg" alt="Donat J.CO">
+                <div class="details">
+                    <p>Oreology</p>
+                    <p class="price">Rp 8.000</p>
+                    <p>Jumlah Pesanan : 35</p>
+                </div>
+                <button type="submit" name="hapus" class="hapus-btn">Hapus</button>
+
+            </div>
+            <!-- Menu content generated from database -->
+            
+        </div>
+    </div>
+</body>
+</html>
