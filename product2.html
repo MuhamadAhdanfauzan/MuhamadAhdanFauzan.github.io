@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bursa Makanan - Pembayaran</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Bursa Makanan - Produk</title>
+    <link rel="stylesheet" href="css/product.css">
     <style>
-        /* Your existing CSS styles */
         .header-container {
             background-color: #4CAF50;
             color: white;
@@ -48,73 +46,81 @@
             font-size: 16px;
         }
         .container {
-            max-width: 500px;
+            max-width: 900px;
             margin: 20px auto;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 50px;
+        }
+
+        .product {
+            width: 40%;
+            background-color: #f0f0f0;
             padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
-        h2 {
-            margin-top: 0;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
+
+        .product img {
+            width: 100%;
+            border-radius: 5px;
         }
-        .payment-options {
-            margin-bottom: 20px;
+
+        .product h3, .product p {
+            text-align: center;
         }
-        .payment-option {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            cursor: pointer; /* Added cursor pointer for clickable effect */
+
+        .order-summary {
+            width: 55%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
-        .payment-option:last-child {
-            border-bottom: none;
-        }
-        .radio-button {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #4CAF50;
-            border-radius: 50%;
-            display: inline-block;
-        }
-        .radio-button.active {
-            background-color: #4CAF50;
-        }
-        .summary {
-            margin-top: 20px;
-        }
-        .summary-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        .pay-button {
-            background-color: #4CAF50;
-            color: white;
+
+        .order-summary .promo {
+            background-color: #f0f0f0;
             border: none;
             padding: 10px;
             width: 100%;
-            border-radius: 5px;
+            margin-bottom: 20px;
             cursor: pointer;
-            font-size: 16px;
         }
-        .link {
-            color: #4CAF50;
-            text-decoration: none;
-            font-size: 14px;
+
+        .summary, .total {
+            margin-bottom: 20px;
+        }
+
+        .summary h4, .total h3 {
+            margin: 0 0 10px 0;
+        }
+
+        .summary p, .total p {
+            margin: 5px 0;
+        }
+
+        .total button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .total button:hover {
+            background-color: #45a049;
         }
     </style>
+
 </head>
 <body>
-    <div class="header-container">
-        <a href="index.html" style="text-decoration: none; color: inherit;">
-            <div class="header">Bursa Makanan</div>
-        </a>        
-        <div class="nav-container">
+<div class="header-container">
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+        <div class="header">Bursa Makanan</div>
+    </a>        
+    <div class="nav-container">
             <div class="search-bar">
                 <input type="text" placeholder="Cari di Bursa Makanan...">
             </div>
@@ -127,58 +133,34 @@
         </div>
     </div>
     <div class="container">
-        <h2>Pembayaran <a href="#" class="link" style="float: right;">Lihat Semua</a></h2>
-        <div class="payment-options">
-            <div class="payment-option" id="mandiri-option">
-                <span>Mandiri Virtual Account</span>
-                <span class="radio-button active"></span>
+        <div class="product" id="produk_2">
+            <img src="uploads/produk_2/tiramisu.jpg" alt="Produk 1">
+            <h3>J.CO Donuts</h3>
+            <p>Deskripsi Produk 1<br>Donat rasa tiramisu 1 kotak isi 4</p>
+        </div>
+        <div class="order-summary">
+            <button class="promo">Makin hemat pakai promo</button>
+            <div class="summary">
+                <h4>Ringkasan Belanja</h4>
+                <p>Total Belanja</p>
+                <p>Total Harga (1 Barang) Rp 13,000.00</p>
+                <p>Total Proteksi Rp 1.000,00</p>
             </div>
-            <div class="payment-option" id="bca-option">
-                <span>BCA Virtual Account</span>
-                <span class="radio-button"></span>
+            <div class="summary">
+                <h4>Ringkasan Belanja</h4>
+                <p>Biaya Layanan Rp 2.000,00</p>
+                <p>Biaya Jasa Aplikasi Rp 2.000,00</p>
             </div>
-            <div class="payment-option" id="wallet-option">
-                <span>Saldo Wallet</span>
-                <span class="radio-button"></span>
+            <div class="total">
+                <h3>Total Tagihan Rp 18.000,00</h3>
+                <form action="bayar2.html" method="POST">
+                    <input type="hidden" name="product_id" value="1">
+                    <input type="hidden" name="total_tagihan" value="55000">
+                    <button type="submit">Beli</button>
+                </form>
             </div>
         </div>
-        <div class="summary">
-            <h3>Ringkasan Pembayaran</h3>
-            <div class="summary-item">
-                <span>Total Tagihan</span>
-                <span id="total-tagihan">Rp 18,000.00</span>
-            </div>
-        </div>
-        <form id="payment-form" method="POST" action="bayar_sukses.html">
-            <input type="hidden" name="product_id" value="1">
-            <input type="hidden" name="total_tagihan" value="18000">
-            <input type="hidden" id="metode_pembayaran" name="metode_pembayaran" value="mandiri"> <!-- Default to Mandiri VA -->
-            <button type="submit" class="pay-button">Bayar</button>
-        </form>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Ambil semua opsi pembayaran
-            const paymentOptions = document.querySelectorAll('.payment-option');
-
-            // Tambahkan event listener untuk setiap opsi pembayaran
-            paymentOptions.forEach(option => {
-                option.addEventListener('click', function() {
-                    // Hapus kelas active dari semua tombol radio
-                    paymentOptions.forEach(opt => {
-                        opt.querySelector('.radio-button').classList.remove('active');
-                    });
-
-                    // Tambahkan kelas active hanya pada tombol radio yang dipilih
-                    this.querySelector('.radio-button').classList.add('active');
-
-                    // Set nilai metode pembayaran di form sesuai opsi yang dipilih
-                    const selectedMethod = this.id.split('-')[0]; // Mendapatkan bagian pertama dari id (mandiri, bca, wallet)
-                    document.getElementById('metode_pembayaran').value = selectedMethod;
-                });
-            });
-        });
-    </script>
 </body>
 </html>
