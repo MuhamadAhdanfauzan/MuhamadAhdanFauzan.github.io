@@ -159,22 +159,31 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Ambil semua opsi pembayaran
-            const paymentOptions = document.querySelectorAll('.payment-option');
+            // Handling form submission
+            const form = document.getElementById('payment-form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting normally
 
-            // Tambahkan event listener untuk setiap opsi pembayaran
+                // You can perform additional processing here if needed
+
+                // Redirect to success page or show success message
+                window.location.href = 'bayar_sukses.html'; // Redirect to success page
+            });
+
+            // Handle payment option selection
+            const paymentOptions = document.querySelectorAll('.payment-option');
             paymentOptions.forEach(option => {
                 option.addEventListener('click', function() {
-                    // Hapus kelas active dari semua tombol radio
+                    // Remove active class from all radio buttons
                     paymentOptions.forEach(opt => {
                         opt.querySelector('.radio-button').classList.remove('active');
                     });
 
-                    // Tambahkan kelas active hanya pada tombol radio yang dipilih
+                    // Add active class to the selected radio button
                     this.querySelector('.radio-button').classList.add('active');
 
-                    // Set nilai metode pembayaran di form sesuai opsi yang dipilih
-                    const selectedMethod = this.id.split('-')[0]; // Mendapatkan bagian pertama dari id (mandiri, bca, wallet)
+                    // Set payment method in hidden input
+                    const selectedMethod = this.id.split('-')[0]; // Get the first part of id (mandiri, bca, wallet)
                     document.getElementById('metode_pembayaran').value = selectedMethod;
                 });
             });
